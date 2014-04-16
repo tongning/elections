@@ -42,7 +42,7 @@ if(pam_auth2($billusername,$schoolpass)){
 	$_SESSION['logged_in']=true;
 	$_SESSION['billusername']=$username;
 	/*obviously this will be edited once we get the username/id pairing info*/
-	$_SESSION['studentid']="416117";
+	$_SESSION['studentid']=$username;
 	$_SESSION['startedvoting']=false;
 	echo "Authentication successful";
 	header('Location:/vote.php');//header to voting page here
