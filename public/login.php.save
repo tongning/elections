@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<title>SGA Election Login</title>
+</head>
+<body>
+<h2>SGA Elections 2014</h2>
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+session_start();
+$id=htmlentities($_POST['idnum']);
+$name=htmlentities($_POST['lastname']);
+
+include_once 'db.inc.php';
+$db = new PDO(DB_INFO, DB_USER, DB_PASS);
+
+$stmt = $db->prepare("SELECT COUNT(*) FROM students AS num_users where id=? AND lastname=?");
+$stmt->execute(array($id,$name));
+$response=$stmt->fetch();
+if($response['num_users']>0){
+        $_SESSION['logged_in']=1;
+        $_SESSION['studentid']=$id;
+        echo("You have been successfully logged in");
+}
+else{
+        echo("Incorrect login information.");
+}
+echo "Welcome, ".$name;
+echo "<br>";
+echo "Your id is ".$id.".";
+
+?>
+<br>
+<a href="http://elections.mbhs.edu">Home</a>
+</body>
+</html>
+<!DOCTYPE html>
+<head>
+<title>SGA Election Login</title>
+</head>
+<body>
+<h2>SGA Elections 2014</h2>
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+session_start();
+$id=htmlentities($_POST['idnum']);
+$name=htmlentities($_POST['lastname']);
+
+include_once 'db.inc.php';
+$db = new PDO(DB_INFO, DB_USER, DB_PASS);
+
+$stmt = $db->prepare("SELECT COUNT(*) FROM students AS num_users where id=? AND lastname=?");
+$stmt->execute(array($id,$name));
+$response=$stmt->fetch();
+if($response['num_users']>0){
+	$_SESSION['logged_in']=1;
+	$_SESSION['studentid']=$id;
+	echo("You have been successfully logged in");
+}
+else{
+	echo("Incorrect login information.");
+}
+echo "Welcome, ".$name;
+echo "<br>";
+echo "Your id is ".$id.".";
+
+?>
+<br>
+<a href="http://elections.mbhs.edu">Home</a>
+</body>
+</html>
