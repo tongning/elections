@@ -133,8 +133,8 @@ School password:<br><input name="schoolpass" type="password"></br>
   background: -ms-linear-gradient(top,  #9BEE1F,  #A1E693);
   background: -webkit-gradient(linear, left top, left bottom, from(#9BEE1F), to(#A1E693));
   background: -moz-linear-gradient(top,  #9BEE1F,  #A1E693);
-  bottom: 25em;
-  left:4em
+  bottom: 0em;
+  left:0em
 }
 .css3button:hover {
   color: #14396A !important;
@@ -159,15 +159,16 @@ School password:<br><input name="schoolpass" type="password"></br>
     <form name="passgen" action="voterlogin.php" method="POST">
         Student ID:&nbsp<input type="text" name="id" size="6" maxlength="6" placeholder="Your ID">
         <br> 
-        Computer password:*&nbsp<input type="text" name="pass" placeholder = "Your password">
+        Computer password:*&nbsp<input type="password" name="schoolpass" placeholder = "Your password">
         <br>
         <br>
-    </form>
-</div>
-<div id = "button">
-  <button type="button" name="" value="" class="css3button">Generate password!
+		<div id = "button">
+  <button type="submit" name="" value="" class="css3button">Start voting!
    
 </div>
+    </form>
+</div>
+
 	<link rel='stylesheet' href='style.css'/>
 	<link rel='next' href='voterlogin.php'/>
 </body>
