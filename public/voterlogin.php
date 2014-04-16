@@ -39,13 +39,25 @@ while($row = $stmt->fetch()){
 	$billusername=$row['uname'];
 }
 if(pam_auth2($billusername,$schoolpass)){
-	$_SESSION['logged_in']=true;
-	$_SESSION['billusername']=$username;
-	/*obviously this will be edited once we get the username/id pairing info*/
-	$_SESSION['studentid']=$username;
-	$_SESSION['startedvoting']=false;
-	echo "Authentication successful";
-	header('Location:/vote.php');//header to voting page here
+	//username and password are correct, but we need to make sure this person hasn't voted already
+	$sql="SELECT COUNT(*) AS num_votes FROM votes WHERE studentid=?";
+	$stmt = $db->prepare($sql);
+	$stmt->execute(array($username));
+	$response=$stmt->fetch();
+	if($response['num_votes']==0){
+	
+		$_SESSION['logged_in']=true;
+		$_SESSION['billusername']=$username;
+		
+		$_SESSION['studentid']=$username;
+		$_SESSION['startedvoting']=false;
+		echo "Authentication successful";
+		header('Location:/vote.php');//header to voting page here
+	}
+	else{
+		$_SESSION['err']=-1;
+		header('Location:/index.php?err=1');
+	}
 }
 else{
 	echo "Authentication failed";
