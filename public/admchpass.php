@@ -17,6 +17,10 @@ if(isset($_SESSION['is_admin']) && $_SESSION['is_admin']==1){
 			echo "Passwords not identical";
 			exit;
 		}
+		if(testPassword($newpass)<3){
+			echo "Password does not meet strength requirements.";
+			exit;
+		}
 		//make sure old pass is correct
 		$sql="SELECT salt
 		FROM admins
