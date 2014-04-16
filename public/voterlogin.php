@@ -13,6 +13,7 @@ session_start();
 include_once 'db.inc.php';
 include_once 'functions.inc.php';
 include_once '/var/www/bill/inc/calendar/inc/auth.php';
+$db=new PDO(DB_INFO,DB_USER,DB_PASS);
 /*include_once '/var/www/bill/inc/loggedin.inc.php';*/
 /*include_once '/var/www/bill/inc/pam_auth2.php';*/
 $username=htmlentities($_POST['id']);
@@ -29,8 +30,15 @@ if (is_numeric($username)) {
 	}
 }
 */
-
-if(pam_auth2($username,$schoolpass)){
+/* id to username convert */
+$sql = "SELECT uname FROM users WHERE id=? LIMIT 1";
+$stmt = $db->prepare($sql);
+$stmt->execute(array($username));
+$billusername="";
+while($row = $stmt->fetch()){
+	$billusername=$row['uname'];
+}
+if(pam_auth2($billusername,$schoolpass)){
 	$_SESSION['logged_in']=true;
 	$_SESSION['billusername']=$username;
 	/*obviously this will be edited once we get the username/id pairing info*/
