@@ -66,7 +66,7 @@ if(isset($_SESSION['is_admin']) && $_SESSION['is_admin']==1){
 		Confirm:<br><input type="password" name="newpasscfrm"><br>
 		<input type="submit" value="Submit">
 		</form>
-		
+		<a href="admhome.php">Admin Home</a>
 		
 		';
 	

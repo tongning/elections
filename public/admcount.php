@@ -16,7 +16,7 @@ if(isset($_SESSION['is_admin']) && $_SESSION['is_admin']==1){
 		$response = $stm->fetch();
 		echo $response['num_votes']."<br>";
 	}
-	
+	echo '<a href="admhome.php">Admin Home</a>';
 
 }
 else{
