@@ -50,8 +50,8 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
 		//user has already begun voting, and the list of positions is already set in session cookie
 		//add code to display voting form
 		if(count($_SESSION['app_positions'])==0){
-			session_destroy();
-			header('Location: /done.php');
+
+			header('Location: /confirm.php');
 			exit;
 		}
 		$_SESSION['current_vote']=$_SESSION['app_positions'][0];
