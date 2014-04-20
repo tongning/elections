@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <meta name = "author" content = "Caitlyn Singam (front end design)">
@@ -14,6 +14,7 @@
    /* Sets the background for the page */
    body {
     /* change this image to change your backgroud*/
+    font-family: 'Arial';
     background-image: url("http://www.desktopwallpaperhd.net/wallpapers/6/7/nature-light-background-wallpaper-computers-desktop-60007.jpg");
     background-color: rgb(160, 230, 95);
     background-size: 100% 100%;
@@ -41,10 +42,11 @@
 }
     
 #SGA{
-    position: absolute;
+    position: relative;
     font-family: Lily Script One;
     color: red;
-    bottom: 11.5em !important;
+    top: -1em;
+    //bottom: 11.5em !important;
     left: -2em !important;
     padding: 10px 10px 10px 175px;
     font-size:40px;
@@ -125,7 +127,7 @@
 <div id="SGA">
 <h1>SGA</h1>
 </div>
-<br><br><br><br><br>
+<br>
 <?php
 /*error_reporting(E_ALL);
 ini_set('display_errors', '1');*/
@@ -142,11 +144,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
 	if($stmt->execute(array($studentid))){
 		while($row=$stmt->fetch()){
 			$votergrade=$row['grade'];
-		
-		
 		}
-	
-	
 	}
 	
 	if(!$_SESSION['startedvoting']){
@@ -194,8 +192,6 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
 		if($stmt->execute(array($_SESSION['app_positions'][0]))){
 			while($row=$stmt->fetch()){
 				echo '<input type="radio" name="choice" value="'.$row['candidateid'].'" >'.$row['firstname'].' '.$row['lastname'].'<br>';
-		
-		
 			}
 	
 	
