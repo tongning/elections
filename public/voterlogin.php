@@ -40,11 +40,11 @@ while($row = $stmt->fetch()){
 }
 if(pam_auth2($billusername,$schoolpass)){
 	//username and password are correct, but we need to make sure this person hasn't voted already
-	$sql="SELECT COUNT(*) AS num_votes FROM votes WHERE studentid=?";
+	$sql="SELECT COUNT(*) AS num_votes FROM students WHERE id=? AND voted=?";
 	$stmt = $db->prepare($sql);
-	$stmt->execute(array($username));
+	$stmt->execute(array($username,'0'));
 	$response=$stmt->fetch();
-	if($response['num_votes']==0){
+	if($response['num_votes']==1){
 	
 		$_SESSION['logged_in']=true;
 		$_SESSION['billusername']=$username;

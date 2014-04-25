@@ -48,8 +48,20 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true && isset($_SESS
             $stmt=$db->prepare($sql);
             $stmt->execute(array($stuid));
             $stmt->closeCursor();
+			//clear ID numbers for anonymous voting
+			//first record that user has voted
+			$sql="UPDATE students SET voted=1 WHERE id=?";
+			$stmt=$db->prepare($sql);
+			$stmt->execute(array($stuid));
+			$stmt->closeCursor();
+			
             session_destroy();
             header('Location:done.php');
+			//now clear student IDs
+			$sql="UPDATE votes SET studentid=0 WHERE studentid=?";
+			$stmt=$db->prepare($sql);
+			$stmt->execute(array($stuid));
+			$stmt->closeCursor();
         }
     }
 

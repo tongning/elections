@@ -27,7 +27,7 @@ School password:<br><input name="schoolpass" type="password"></br>
 <html>
 <head>
   <meta charset="utf-8">
- <meta author = "Caitlyn Singam">
+ <meta name = "author" content = "Caitlyn Singam">
 
   <title>The 2014 SGA Election</title>
   <div id = "header">
@@ -157,9 +157,9 @@ School password:<br><input name="schoolpass" type="password"></br>
   </div>
   <div id = "input">
     <form name="passgen" action="voterlogin.php" method="POST">
-        Student ID:&nbsp<input type="text" name="id" size="6" maxlength="6" placeholder="Your ID">
+        Student ID:&nbsp<br><input type="text" name="id" size="6" maxlength="6" placeholder="Your ID">
         <br> 
-        Computer password:*&nbsp<input type="password" name="schoolpass" placeholder = "Your password">
+        Computer password/BINX password:*&nbsp<br><input type="password" name="schoolpass" placeholder = "Your password">
         <br>
         <br>
 		<div id = "button">

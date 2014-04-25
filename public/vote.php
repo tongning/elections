@@ -122,6 +122,7 @@
   background: -moz-linear-gradient(top,  #32D948,  #44BD4C);
 }
   </style>
+  <title>SGA Elections 2014</title>
 </head>
 <body>
 <div id="SGA">
