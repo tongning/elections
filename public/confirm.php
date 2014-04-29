@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <head>
     <title>Confirm Selections - SGA Elections 2014</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style  type="text/css">
+	#selection{
+position:relative;
+top:20px;
+left:100px;
+}
+	</style>
 </head>
 <body>
+<p>
+<div id="selection">
 <h2>Confirm your selections</h2>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -28,9 +39,9 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true && isset($_SESS
             $stm=$db->prepare($sql);
             $stm->execute(array($currcandid));
             while($candidate = $stm->fetch()){
-                echo '<br>';
+                echo '<br><strong>';
                 echo $candidate['position_title'];
-                echo '<br>';
+                echo '</strong><br>';
                 echo $candidate['firstname']." ".$candidate['lastname'];
             }
         }
@@ -73,5 +84,7 @@ else{
 
 
 ?>
+</div>
+</p>
 </body>
 </html>

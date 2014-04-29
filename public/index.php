@@ -4,8 +4,7 @@
 </head>
 <body>
 <h3>SGA Elections 2014</h3>
-<p>Welcome to the online SGA election gateway.  To begin voting, log in with your 6-digit
-student ID number and school computer password below.</p>
+<p>Welcome to the online SGA election gateway. </p>
 <h3>To ensure that voting goes smoothly:</h3>
 <ul>
 <li>Do not use the back and/or forward buttons</li>
@@ -30,33 +29,36 @@ School password:<br><input name="schoolpass" type="password"></br>
  <meta name = "author" content = "Caitlyn Singam">
 
   <title>The 2014 SGA Election</title>
-  <div id = "header">
-    	<h1><center><span>Welcome</span> </center> </h1>
-    	<h1><center>to the 2014 Spring SGA Election Portal</center></h1>
-	</div>
-    <div id = "SGA">
-    	<h1>SGA</h1>
-	</div>
+  
   <!-- styling -->
   <!-- http://colorschemedesigner.com/#2q21Tw0w0w0w0 -->
   <link href="http://fonts.googleapis.com/css?family=Overlock|Lily+Script+One|Oxygen|Questrial" rel="stylesheet" type="text/css">
-  <style>
+  <style type="text/css">
    html { 
-      height: 100%; 
+      height: 100%;
+	overflow-y: scroll; 
+ background: url("http://www.desktopwallpaperhd.net/wallpapers/6/7/nature-light-background-wallpaper-computers-desktop-60007.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     }
 
    /* Sets the background for the page */
    body {
+//     width: 100%;
     /* change this image to change your backgroud*/
-    background-image: url("http://www.desktopwallpaperhd.net/wallpapers/6/7/nature-light-background-wallpaper-computers-desktop-60007.jpg");
-    background-color: rgb(160, 230, 95);
-    background-size: 100% 100%;
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    bottom:9em;
+    //background-image: url("http://www.desktopwallpaperhd.net/wallpapers/6/7/nature-light-background-wallpaper-computers-desktop-60007.jpg");
+   // background-size: cover;
+   // background-repeat:no-repeat;    
+//background-color: rgb(160, 230, 95);
+   // background-size: 100% 100%;
+    //background-position: center;
+    //background-attachment: scroll;
+    //background-repeat: no-repeat;
+    //overflow-x: hidden;
+    //overflow-y: hidden;
+    //bottom:9em;
   }
     span{
     font-family: Lily Script One;
@@ -66,23 +68,28 @@ School password:<br><input name="schoolpass" type="password"></br>
     
 #image1{
     position: relative;
-    bottom: 24em;
-    left: 15%;
-    width: 6em;
+    top: 0px;
+    left: 200px;
+	width: 100px;
+  
+    
 }
 #image2{
+ position: relative;
     border: 2px solid green;
-    position: relative;
-    bottom: 24em;
-    left: 75%;
-    width: 11em;
+   width:200px;
+  top:0px;
+    left:750px;    
+    
+    //width: 11em;
 }
 
 #SGA{
     position: relative;
+	left:-50px;
     font-family: Lily Script One;
     color: red;
-    bottom: 250px !important;
+    top:600px;
     right: 90px !important;
     padding: 10px 10px 10px 175px;
     font-size:40px;
@@ -92,6 +99,7 @@ School password:<br><input name="schoolpass" type="password"></br>
    color: green;
    margin: 10px;
    position: relative;
+   top:0px;
    max-width: 1000px;
    padding: 10px 10px 10px 200px;
 }
@@ -100,7 +108,7 @@ School password:<br><input name="schoolpass" type="password"></br>
     margin: 5%;
     position: relative;
     max-width: 100%;
-    bottom: 20em;
+    top:-300px;  
     font-size:20px;
 }
 #input{
@@ -108,7 +116,7 @@ School password:<br><input name="schoolpass" type="password"></br>
     margin: 5%;
     position: relative;
     max-width: 100%;
-    bottom: 22em;
+    top:-280px;
     font-size:20px;
 }
 .css3button {
@@ -144,16 +152,49 @@ School password:<br><input name="schoolpass" type="password"></br>
   background: -webkit-gradient(linear, left top, left bottom, from(#32D948), to(#44BD4C));
   background: -moz-linear-gradient(top,  #32D948,  #44BD4C);
 }
-  </style>
+#content {
+position:relative;
+height:100%;
+width:100%;
+}
+#logos{
+position:relative;
+width:500px;
+}
+#pics{
+position:relative;
+width:1000px;
+top:-200px;
+left:-300px;
+}
+</style>
 </head>
 <body>
-  <img id="image1" src="http://finearts.mbhs.edu/images/blazer_transparent.gif">
+
+<div id = "header">
+    	<div id="logos">
+		<h1><center><span>Welcome</span> </center> </h1>
+    	<h1><center>to the 2014 Spring SGA Election Portal</center></h1>
+		</div>
+		
+		
+	<div id="pics">
+	<img id="image1" src="http://finearts.mbhs.edu/images/blazer_transparent.gif">
   <img id="image2" src="http://nelsoncountygazette.com/wp-content/uploads/2013/11/election_2014.jpg">
+  <div id = "SGA">
+    	<h1>SGA</h1>
+	</div>
+	</div>
+	</div>
+    
+
+  <div id="content">
+ 
   <div id = "instructions">
   <p>Greetings, voters!</p>
-  <p>This site will guide you through the process of voting for candidate(s) in the 2014 SGA election. Rest assured that your votes will remain confidential.</p>
-  <p>To begin, use the password generator below to create a unique password for yourself.</p>
-  <p><strong>Please do not user the back buttons in the browser or try to exit out of the voting process until you see the confirmation page.</strong> However, if you must go back/exit out for some reason, please request assistance.</p>
+  <p>This site will guide you through the process of voting for candidate(s) in the 2014 SGA election. Your votes are anonymous.</p>
+
+  <p><strong>Please do not use the back buttons in the browser or try to exit out of the voting process until you see the confirmation page.</strong> However, if you must go back/exit out for some reason, please request assistance.</p>
   </div>
   <div id = "input">
     <form name="passgen" action="voterlogin.php" method="POST">
@@ -169,7 +210,9 @@ School password:<br><input name="schoolpass" type="password"></br>
     </form>
 </div>
 
-	<link rel='stylesheet' href='style.css'/>
+	
 	<link rel='next' href='voterlogin.php'/>
+</div>
+</div>
 </body>
 </html>

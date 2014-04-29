@@ -121,6 +121,11 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#32D948), to(#44BD4C));
   background: -moz-linear-gradient(top,  #32D948,  #44BD4C);
 }
+#selection{
+position:relative;
+top:-130px;
+left:100px;
+}
   </style>
   <title>SGA Elections 2014</title>
 </head>
@@ -129,6 +134,7 @@
 <h1>SGA</h1>
 </div>
 <br>
+<div id="selection">
 <?php
 /*error_reporting(E_ALL);
 ini_set('display_errors', '1');*/
@@ -214,6 +220,7 @@ else{
 
 
 ?>
+</div>
 </body>
 
 </html>
