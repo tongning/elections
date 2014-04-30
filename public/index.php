@@ -36,7 +36,7 @@ School password:<br><input name="schoolpass" type="password"></br>
   <style type="text/css">
    html { 
       height: 100%;
-	overflow-y: scroll; 
+      overflow-y: scroll; 
  background: url("http://www.desktopwallpaperhd.net/wallpapers/6/7/nature-light-background-wallpaper-computers-desktop-60007.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -46,51 +46,49 @@ School password:<br><input name="schoolpass" type="password"></br>
 
    /* Sets the background for the page */
    body {
-//     width: 100%;
+/*     width: 100%;
     /* change this image to change your backgroud*/
-    //background-image: url("http://www.desktopwallpaperhd.net/wallpapers/6/7/nature-light-background-wallpaper-computers-desktop-60007.jpg");
-   // background-size: cover;
-   // background-repeat:no-repeat;    
-//background-color: rgb(160, 230, 95);
-   // background-size: 100% 100%;
-    //background-position: center;
-    //background-attachment: scroll;
-    //background-repeat: no-repeat;
-    //overflow-x: hidden;
-    //overflow-y: hidden;
-    //bottom:9em;
+   /*  background-image: url("http://www.desktopwallpaperhd.net/wallpapers/6/7/nature-light-background-wallpaper-computers-desktop-60007.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;    
+    background-color: rgb(160, 230, 95);
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    bottom:9em;
+*/
   }
-    span{
+span{
     font-family: Lily Script One;
     color: red;
     font-size:40pt;
 }
     
 #image1{
-    position: relative;
-    top: 0px;
-    left: 200px;
-	width: 100px;
-  
-    
+    position: absolute;
+    top: 8%;
+    left: 20%;
+    width: 100px;
 }
+
 #image2{
- position: relative;
+    position: absolute;
     border: 2px solid green;
-   width:200px;
-  top:0px;
-    left:750px;    
-    
-    //width: 11em;
+    width:200px;
+    top:2%;
+    left:1000px ;    
 }
 
 #SGA{
-    position: relative;
-	left:-50px;
+    position: absolute;
+    left:10%;
     font-family: Lily Script One;
     color: red;
-    top:600px;
-    right: 90px !important;
+    top:1%;
+   // right: 90px !important;
     padding: 10px 10px 10px 175px;
     font-size:40px;
 }
@@ -98,17 +96,18 @@ School password:<br><input name="schoolpass" type="password"></br>
    font-family: Oxygen;
    color: green;
    margin: 10px;
-   position: relative;
-   top:0px;
+   left:-200px;
+   position: absolute;
+   top:2%;
    max-width: 1000px;
-   padding: 10px 10px 10px 200px;
+   padding: 10px 10px 10px 500px;
 }
 #instructions{
     font-family:Overlock;
     margin: 5%;
-    position: relative;
+    position: absolute;
     max-width: 100%;
-    top:-300px;  
+    top:40%;  
     font-size:20px;
 }
 #input{
@@ -116,7 +115,7 @@ School password:<br><input name="schoolpass" type="password"></br>
     margin: 5%;
     position: relative;
     max-width: 100%;
-    top:-280px;
+    top:400px;
     font-size:20px;
 }
 .css3button {
@@ -141,8 +140,8 @@ School password:<br><input name="schoolpass" type="password"></br>
   background: -ms-linear-gradient(top,  #9BEE1F,  #A1E693);
   background: -webkit-gradient(linear, left top, left bottom, from(#9BEE1F), to(#A1E693));
   background: -moz-linear-gradient(top,  #9BEE1F,  #A1E693);
-  bottom: 0em;
-  left:0em
+ // bottom: 0em;
+ // left:0em
 }
 .css3button:hover {
   color: #14396A !important;
@@ -153,20 +152,23 @@ School password:<br><input name="schoolpass" type="password"></br>
   background: -moz-linear-gradient(top,  #32D948,  #44BD4C);
 }
 #content {
-position:relative;
-height:100%;
-width:100%;
+  position:relative;	
+  height:100%;
+  width:100%;
 }
+
 #logos{
-position:relative;
-width:500px;
+  position:relative;
+  width:500px;
 }
+
 #pics{
-position:relative;
-width:1000px;
-top:-200px;
-left:-300px;
+  position:relative;
+  width:1000px;
+  top:-200px;
+  left:-400px;
 }
+
 </style>
 </head>
 <body>
@@ -210,8 +212,7 @@ left:-300px;
     </form>
 </div>
 
-	
-	<link rel='next' href='voterlogin.php'/>
+
 </div>
 </div>
 </body>
