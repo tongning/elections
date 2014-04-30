@@ -102,6 +102,7 @@ span{
    max-width: 1000px;
    padding: 10px 10px 10px 500px;
 }
+
 #instructions{
     font-family:Overlock;
     margin: 5%;
@@ -110,6 +111,7 @@ span{
     top:40%;  
     font-size:20px;
 }
+
 #input{
     font-family:Overlock;
     margin: 5%;
@@ -118,6 +120,7 @@ span{
     top:400px;
     font-size:20px;
 }
+
 .css3button {
   font-family: "Questrial";
   color: #294CFF !important;
@@ -143,6 +146,7 @@ span{
  // bottom: 0em;
  // left:0em
 }
+
 .css3button:hover {
   color: #14396A !important;
   background: #468CCF;
@@ -151,10 +155,12 @@ span{
   background: -webkit-gradient(linear, left top, left bottom, from(#32D948), to(#44BD4C));
   background: -moz-linear-gradient(top,  #32D948,  #44BD4C);
 }
+
 #content {
-  position:relative;	
+  position:absolute;	
   height:100%;
   width:100%;
+  top: 20%; 
 }
 
 #logos{
