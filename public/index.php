@@ -78,13 +78,32 @@ padding: 10px 10px 10px 175px;
 font-size:40px;
 }
 #header{
+<?php
+if(preg_match('/(?i)msie [1-9]/',$_SERVER['HTTP_USER_AGENT']))
+{
+    // if IE<=8
+    echo '
+
 font-family: Oxygen;
 color: green;
 margin: 10px;
 position: relative;
-top:40px;
+top:-10px;
 max-width: 1000px;
-padding: 10px 10px 10px 200px;
+padding: 10px 10px 10px 200px;';}
+else{
+echo '
+
+font-family: Oxygen;
+color: green;
+margin: 10px;
+position: relative;
+top:50px;
+max-width: 1000px;
+padding: 10px 10px 10px 200px;';
+
+}
+?>
 }
 #instructions{
 font-family:Overlock;
